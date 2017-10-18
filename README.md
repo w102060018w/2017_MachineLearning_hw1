@@ -87,42 +87,61 @@ The data provided in this assigment are as follows:
 
 
 ### Solving the Weight
-recalll that in this assignment we define the polynomial as :
+#### Recall:
+recall that in this assignment we define the polynomial as :
 
-$ y(x, w) = w_{0} + w_{1}*x + w_{1}*x^{2} + ... + w_{M}*x^{M} = \sum_{j=0}^{M}w_j*x^{j} $
+<div style="text-align:center"><img src="./img/y_func.png" height="48px"></div>
 
-### Training Detail
-1. **AlexNet**:</br>
-I didn't fintune all layers, since sometimes it will lose the advantage of loading pretrain parameters into the netwrok. I **freeze the first 2 bottom layers** (i.e. conv1, conv2) and finetune from conv3 to fc6 and also finetune on the additional 2 layers I add above the concate result.
-2. **InceptionV3**:</br>
-**First**: finetune the 2 layers I add above the whole structure (i.e. **freeze all layers in the InceptionV3**) </br>
-**Second**: finetune the 2 layers I add on top and 2-stages of InceptionV3(i.e. **freeze the bottom 249 layers**)</br>
-In this way, we can first avoid that since the layers we initialize is too bad (think of it as random generates), it prones to ruin the parameters if we directly finetune them with loaded weight InceptionV3 model. Also, on the second time of finetuning, it can converge more easily since we have already trained the first top 2 layers which are initially pretty worse.
+which the dot above the variable means it could be a vector.</br>
 
 
-## Discussion
-1. Preprocess of data (shuffle do important ! )</br>
-Initially I divide the train/val data in a wrong way, which I didn't apply shuffle on data before divide into train-set and validation-set. The result between non-shuffle and shuffle data is as follows: </br>
+Suppose now we fix the order of polynomial(M) to be **2**.</br>
+Therefore when the **dimension of x is 1**, we will write the function as :
 
-| Best-val-loss / Best-val-Acc | non-shuffle | shuffle |
-|-------|----------|----------|
-| Model-InceptionV3| 1.7323 / 0.6119 | 0.1381 / 0.9579 |
+<div style="text-align:center"><img src="./img/y_func_1dim.png" height="60px"></div>
 
-Especially the data we get this time is the sequence frames of the vedio, so the drawback of un-shuffle data will be more obvious in this task.
+when the **dimension of x is D**, we will write the function as :
 
-2. One stream v.s. Two streams 
+<div style="text-align:center"><img src="./img/y_func_multidim.png" height="60px"></div>
 
-| Accuracy | 1-stream | 2-streams |
-|-------|----------|----------|
-| Model-AlexNet| 0.4175 | 0.5658 |
-One thing need to notice is that I can't confirm that the 2-streams result will definitely beat the result of 1-stream, since the setting of 1-stream and 2-streams are as follows: </br>
+The key point here is we want to solve **the best W**, which is actually the positioin in coordinate system spanned by the basis, Φ.</br>
+The Φ is defined as : </br>
 
-| | learning-rate | finetune-layers | epoch | batch-size |
-|-------|----------|----------|--------|------|
-| 1-stream|  0.001 | fc7, fc8 | 10 | 128 |
-| 2-streams|  0.001 | conv3, conv4, conv5, fc6, fc7, fc8 | 10 | 16 |
+<div style="text-align:center"><img src="./img/phi.png" height="70px" align="middle"></div>
 
-The setting on the two is a little bit different (finetune-layers and batch-size), so I am not 100 percent for sure that 2-streams is better than 2-stream.
+which Φ(x) equals to: </br> 
+
+<div style="text-align:center"><img src="./img/phi_x.png" height="25px" align="middle"></div>
+
+There are two ways to solve the **W**, one is using [batch learning]("./img/bt_learning.png"), the other is using [sequential learning]("./img/sq_learning.png")(or called Online learning).
+#### solve:
+Here both in problem 4 and 5, I solve **W** by batch-learning.</br>
+
+* **non-regularized error function**:
+
+<div style="text-align:center"><img src="./img/non_regu_err.png" height="50px" align="middle"></div>
+
+The solution formula would be like follows:
+
+<div style="text-align:center"><img src="./img/w_sol.png" height="35px" align="middle"></div>
+
+which t is the target(label).
+
+* **regularized error function**:
+
+<div style="text-align:center"><img src="./img/regu_err.png" height="50px" align="middle"></div>
+
+The solution formula would be then like follows:
+
+<div style="text-align:center"><img src="./img/w_sol_regu.png" height="34px" align="middle"></div>
+
+which t is also the target(label).
+
+**For more details on coding implementation and results please refer to** </br>
+[hw1-4-polynomial-curve-fitting.ipynb](./hw1-4_polynomial_curve_fitting.ipynb)</br>
+[hw1-5-polynomial-regression.ipynb](./hw1-5_polynomial_regression.ipynb)</br>
+
+
 
 ## Acknowledgement
 Thanks the awesome tutorial of finetuning on AlexNet done by [Frederik Kratzert](https://kratzert.github.io/2017/02/24/finetuning-alexnet-with-tensorflow.html). </br>
