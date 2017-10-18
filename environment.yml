@@ -18,5 +18,4 @@ dependencies:
       - prompt-toolkit==1.0.15
       - tables==3.4.2
       - matplotlib
-      - itertools
 
