@@ -146,6 +146,6 @@ which t is also the target(label).
 
 - [numpy linalg library](https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.linalg.pinv.html)
 
-- [wiki of batch-learninf](https://en.wikipedia.org/wiki/Online_machine_learning)
+- [wiki of batch-learning](https://en.wikipedia.org/wiki/Online_machine_learning)
 
 - [markdown cheet sheet](http://csrgxtu.github.io/2015/03/20/Writing-Mathematic-Fomulars-in-Markdown/)
