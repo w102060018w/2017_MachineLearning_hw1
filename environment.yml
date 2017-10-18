@@ -6,18 +6,18 @@ dependencies:
     - numpy==1.13.1
     - scipy==0.19.1
     - notebook
-- pip:
-  - arff==0.9
-  - backports.shutil-get-terminal-size==1.0.0
-  - et-xmlfile==1.0.1
-  - ipython-genutils==0.2.0
-  - jupyter-client==5.1.0
-  - jupyter-console==5.2.0
-  - jupyter-core==4.3.0
-  - jupyterlab-launcher==0.4.0
-  - prompt-toolkit==1.0.15
-  - ruamel-yaml==0.11.14
-  - tables==3.4.2
-  - matplotlib
-  - itertools
+    - pip:
+      - arff==0.9
+      - backports.shutil-get-terminal-size==1.0.0
+      - et-xmlfile==1.0.1
+      - ipython-genutils==0.2.0
+      - jupyter-client==5.1.0
+      - jupyter-console==5.2.0
+      - jupyter-core==4.3.0
+      - jupyterlab-launcher==0.4.0
+      - prompt-toolkit==1.0.15
+      - ruamel-yaml==0.11.14
+      - tables==3.4.2
+      - matplotlib
+      - itertools
 
