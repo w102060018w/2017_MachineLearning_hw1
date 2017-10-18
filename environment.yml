@@ -16,7 +16,6 @@ dependencies:
       - jupyter-core==4.3.0
       - jupyterlab-launcher==0.4.0
       - prompt-toolkit==1.0.15
-      - ruamel-yaml==0.11.14
       - tables==3.4.2
       - matplotlib
       - itertools
