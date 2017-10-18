@@ -62,7 +62,7 @@ As the figure shows, we will select the 3rd dimension as the most contributive a
 
 
 ## Implementation
-### Data 
+### - Data 
 The data provided in this assigment are as follows:
 
 * problem-4 : **1-dimension** data
@@ -85,8 +85,7 @@ The data provided in this assigment are as follows:
 | testing(# 30)| 1</br> 1</br> ...</br>2</br> 2</br> ...</br>3</br> 3</br> ...  | [ 5.   3.5  1.3  0.3]</br>[ 4.5  2.3  1.3  0.3] </br> ...</br>[ 5.5  2.6  4.4  1.2]</br>[ 6.1  3.   4.6  1.4]</br>...</br>[ 6.7  3.1  5.6  2.4]</br>[ 6.9  3.1  5.1  2.3]</br> ... |
 
 
-
-### Solving the Weight
+### - Solving the Weight
 #### Recall:
 recall that in this assignment we define the polynomial as :
 
@@ -142,18 +141,11 @@ which t is also the target(label).
 [hw1-5-polynomial-regression.ipynb](./hw1-5_polynomial_regression.ipynb)</br>
 
 
-
-## Acknowledgement
-Thanks the awesome tutorial of finetuning on AlexNet done by [Frederik Kratzert](https://kratzert.github.io/2017/02/24/finetuning-alexnet-with-tensorflow.html). </br>
-Also thanks [Zayn Liu](https://github.com/refu0523) giving me so many advice on finishing this assignment.
-
 ## Reference
-[scikit-learn lib on drawing precision-recall-curve](http://scikit-learn.org/stable/auto_examples/model_selection/plot_precision_recall.html)
+- Notes taken in class
 
-[code of little data for fintuning](https://gist.github.com/fchollet/7eb39b44eb9e16e59632d25fb3119975)
+- [numpy linalg library](https://docs.scipy.org/doc/numpy-1.13.0/reference/generated/numpy.linalg.pinv.html)
 
-[keras example](https://keras.io/applications/#resnet50)
+- [wiki of batch-learninf](https://en.wikipedia.org/wiki/Online_machine_learning)
 
-[alexnet](https://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks.pdf)
-
-[Inceptionv3](https://www.pyimagesearch.com/2017/03/20/imagenet-vggnet-resnet-inception-xception-keras/)
+- [markdown cheet sheet](http://csrgxtu.github.io/2015/03/20/Writing-Mathematic-Fomulars-in-Markdown/)
