@@ -111,8 +111,8 @@ which Φ(x) equals to: </br>
 
 <p align="center"><img src="./img/phi_x.png" height="25px" align="middle"></p>
 
-There are two ways to solve the **W**, one is using [batch learning]("./img/bt_learning.png"), the other is using [sequential learning]("./img/sq_learning.png")(or called Online learning).
-#### solve:
+There are two ways to solve the **W**, one is using [batch learning](./img/bt_learning.png), the other is using [sequential learning](./img/sq_learning.png)(or called Online learning).
+#### Solve:
 Here both in problem 4 and 5, I solve **W** by batch-learning.</br>
 
 * **non-regularized error function**:
