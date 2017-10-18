@@ -118,11 +118,11 @@ Here both in problem 4 and 5, I solve **W** by **batch-learning**.</br>
 
 * **non-regularized error function**:
 
-<p align="center"><img src="./img/non_regu_err.png" height="50px" align="middle"></p>
+<p align="center"><img src="./img/non_regu_err.png" height="60px" align="middle"></p>
 
 The solution formula would be like follows:
 
-<p align="center"><img src="./img/w_sol.png" height="45px" align="middle"></p>
+<p align="center"><img src="./img/w_sol.png" height="40px" align="middle"></p>
 
 which t is the target(label).
 
@@ -132,7 +132,7 @@ which t is the target(label).
 
 The solution formula would be then like follows:
 
-<p align="center"><img src="./img/w_sol_regu.png" height="44px" align="middle"></p>
+<p align="center"><img src="./img/w_sol_regu.png" height="39px" align="middle"></p>
 
 which t is also the target(label).
 
