@@ -36,25 +36,24 @@ source deactivate ML_hw1
 ## Results and Discussions
 ### Problem 4 : Polynomial Curve Fitting
 * Root-Mean-Square error evaluated on traning set and testing set. (Order, M,  range from 1 to 9)
-![alt text](./OutputFigure/hw1-4-(1)_non_regularize.png)
+<p align="center"><img src="./OutputFigure/hw1-4-(1)_non_regularize.png"></p>
 
 As the figure shows, We believe when order goes to 7 or more will cause the overfitting problem. (more detail discussion please refer to the [report](./report.pdf)).
  
 * Training and testing Root-Mean-Square error in regularized case. (Order, M,  fix to 9; Regularized term, lnλ, range from -20 to 0)
-![alt text](./OutputFigure/hw1-4-(2)_regularize.png)
+<p align="center"><img src="./OutputFigure/hw1-4-(2)_regularize.png"></p>
+
 
 More Detail discussion of the effect of λ please also refer to the [report](./report.pdf).
 
 ### Problem 5 : Polynomial Regression
 * Root-Mean-Square error evaluated on **multi-dimension** traning set and testing set. (Order, M, fix to 1 and 2)
-
-	![alt text](./OutputFigure/hw1-5-(1)_non_regularize_multi-dim.png)
+<p align="center"><img src="./OutputFigure/hw1-5-(1)_non_regularize_multi-dim.png"></p>
 
 As the figure shows, when order increases, the RMS error will decrease.
  
 * Training Root-Mean-Square error of different attribute. (Selected dimension range from 0th to 3th)
-
-	![alt text](./OutputFigure/hw1-5-(2)_atribute_decision.png)
+<p align="center"><img src="./OutputFigure/hw1-5-(2)_atribute_decision.png"></p>	
 
 As the figure shows, we will select the 3rd dimension as the most contributive attribute, since it achieve the lowest RMS error on the traning set. More detail please also refer to the [report](./report.pdf).
 
@@ -89,7 +88,7 @@ The data provided in this assigment are as follows:
 #### Recall:
 recall that in this assignment we define the polynomial as :
 
-<div style="text-align:center"><img src="./img/y_func.png" height="48px"></div>
+<p align="center"><img src="./img/y_func.png" height="48px"></p>
 
 which the dot above the variable means it could be a vector.</br>
 
@@ -97,20 +96,20 @@ which the dot above the variable means it could be a vector.</br>
 Suppose now we fix the order of polynomial(M) to be **2**.</br>
 Therefore when the **dimension of x is 1**, we will write the function as :
 
-<div style="text-align:center"><img src="./img/y_func_1dim.png" height="60px"></div>
+<p align="center"><img src="./img/y_func_1dim.png" height="60px"></p>
 
 when the **dimension of x is D**, we will write the function as :
 
-<div style="text-align:center"><img src="./img/y_func_multidim.png" height="60px"></div>
+<p align="center"><img src="./img/y_func_multidim.png" height="60px"></p>
 
 The key point here is we want to solve **the best W**, which is actually the positioin in coordinate system spanned by the basis, Φ.</br>
 The Φ is defined as : </br>
 
-<div style="text-align:center"><img src="./img/phi.png" height="70px" align="middle"></div>
+<p align="center"><img src="./img/phi.png" height="70px" align="middle"></p>
 
 which Φ(x) equals to: </br> 
 
-<div style="text-align:center"><img src="./img/phi_x.png" height="25px" align="middle"></div>
+<p align="center"><img src="./img/phi_x.png" height="25px" align="middle"></p>
 
 There are two ways to solve the **W**, one is using [batch learning]("./img/bt_learning.png"), the other is using [sequential learning]("./img/sq_learning.png")(or called Online learning).
 #### solve:
@@ -118,21 +117,21 @@ Here both in problem 4 and 5, I solve **W** by batch-learning.</br>
 
 * **non-regularized error function**:
 
-<div style="text-align:center"><img src="./img/non_regu_err.png" height="50px" align="middle"></div>
+<p align="center"><img src="./img/non_regu_err.png" height="50px" align="middle"></p>
 
 The solution formula would be like follows:
 
-<div style="text-align:center"><img src="./img/w_sol.png" height="35px" align="middle"></div>
+<p align="center"><img src="./img/w_sol.png" height="35px" align="middle"></p>
 
 which t is the target(label).
 
 * **regularized error function**:
 
-<div style="text-align:center"><img src="./img/regu_err.png" height="50px" align="middle"></div>
+<p align="center"><img src="./img/regu_err.png" height="50px" align="middle"></p>
 
 The solution formula would be then like follows:
 
-<div style="text-align:center"><img src="./img/w_sol_regu.png" height="34px" align="middle"></div>
+<p align="center"><img src="./img/w_sol_regu.png" height="34px" align="middle"></p>
 
 which t is also the target(label).
 
