@@ -1,4 +1,4 @@
-name: cedl
+name: ML_hw1
 channels:
     - defaults
 dependencies:
@@ -18,4 +18,5 @@ dependencies:
       - prompt-toolkit==1.0.15
       - tables==3.4.2
       - matplotlib
+      - pandas
 
