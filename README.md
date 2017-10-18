@@ -84,11 +84,11 @@ The data provided in this assigment are as follows:
 | testing(# 30)| 1</br> 1</br> ...</br>2</br> 2</br> ...</br>3</br> 3</br> ...  | [ 5.   3.5  1.3  0.3]</br>[ 4.5  2.3  1.3  0.3] </br> ...</br>[ 5.5  2.6  4.4  1.2]</br>[ 6.1  3.   4.6  1.4]</br>...</br>[ 6.7  3.1  5.6  2.4]</br>[ 6.9  3.1  5.1  2.3]</br> ... |
 
 
-### - Solving the Weight
-#### Recall:
-recall that in this assignment we define the polynomial as :
+### - Solve the Best Weight
+### Recall:
+Recall that in this assignment we define the polynomial as :
 
-<p align="center"><img src="./img/y_func.png" height="48px"></p>
+<p align="center"><img src="./img/y_func.png" height="58px"></p>
 
 which the dot above the variable means it could be a vector.</br>
 
@@ -96,24 +96,25 @@ which the dot above the variable means it could be a vector.</br>
 Suppose now we fix the order of polynomial(M) to be **2**.</br>
 Therefore when the **dimension of x is 1**, we will write the function as :
 
-<p align="center"><img src="./img/y_func_1dim.png" height="60px"></p>
+<p align="center"><img src="./img/y_func_1dim.png" height="70px"></p>
 
 when the **dimension of x is D**, we will write the function as :
 
-<p align="center"><img src="./img/y_func_multidim.png" height="60px"></p>
+<p align="center"><img src="./img/y_func_multidim.png" height="70px"></p>
 
 The key point here is we want to solve **the best W**, which is actually the positioin in coordinate system spanned by the basis, Φ.</br>
 The Φ is defined as : </br>
 
-<p align="center"><img src="./img/phi.png" height="70px" align="middle"></p>
+<p align="center"><img src="./img/phi.png" height="80px" align="middle"></p>
 
 which Φ(x) equals to: </br> 
 
-<p align="center"><img src="./img/phi_x.png" height="25px" align="middle"></p>
+<p align="center"><img src="./img/phi_x.png" height="35px" align="middle"></p>
 
-There are two ways to solve the **W**, one is using [batch learning](./img/bt_learning.png), the other is using [sequential learning](./img/sq_learning.png)(or called Online learning).
-#### Solve:
-Here both in problem 4 and 5, I solve **W** by batch-learning.</br>
+There are two ways to solve the **W**, one is using [batch learning](./img/bt_learning.png), the other is using [sequential learning](./img/sq_learning.png)(or called Online learning).</br></br>
+
+### Solve:
+Here both in problem 4 and 5, I solve **W** by **batch-learning**.</br>
 
 * **non-regularized error function**:
 
@@ -121,17 +122,17 @@ Here both in problem 4 and 5, I solve **W** by batch-learning.</br>
 
 The solution formula would be like follows:
 
-<p align="center"><img src="./img/w_sol.png" height="35px" align="middle"></p>
+<p align="center"><img src="./img/w_sol.png" height="45px" align="middle"></p>
 
 which t is the target(label).
 
 * **regularized error function**:
 
-<p align="center"><img src="./img/regu_err.png" height="50px" align="middle"></p>
+<p align="center"><img src="./img/regu_err.png" height="60px" align="middle"></p>
 
 The solution formula would be then like follows:
 
-<p align="center"><img src="./img/w_sol_regu.png" height="34px" align="middle"></p>
+<p align="center"><img src="./img/w_sol_regu.png" height="44px" align="middle"></p>
 
 which t is also the target(label).
 
