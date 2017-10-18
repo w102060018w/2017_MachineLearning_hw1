@@ -5,7 +5,7 @@ Student ID: A061610
 ## Overview
 In this homework, we are going to deal with 3 mathematical problems and 2 programming problems. The former 3 problems is finished in hand-written format, and this repository mainly show the result of the latter 2 programming problems' result. 
 
-##### Files: </br>
+#### Files: </br>
 * [hw1-1.pdf](./hw1-1.pdf): for solving Jensen's Inequality.
 * [hw1-2.pdf](./hw1-2.pdf): for solving Entropy of the Univariate Gaussian.
 * [hw1-3.pdf](./hw1-3.pdf): for solving KL divergence between two Gaussians.
@@ -20,7 +20,7 @@ In this homework, we are going to deal with 3 mathematical problems and 2 progra
 * numpy 1.13.1
 * ipython
 
-### Other Packages
+#### Other Packages
 * pandas
 
 To avoid tedious dependencies problem, I will recommand you to use [Anaconda](https://anaconda.org/) to create a small custom environment as follows:
@@ -55,7 +55,7 @@ As the figure shows, when order increases, the RMS error will decrease.
 * Training Root-Mean-Square error of different attribute. (Selected dimension range from 0th to 3th)
 <p align="center"><img src="./OutputFigure/hw1-5-(2)_atribute_decision.png"></p>	
 
-As the figure shows, we will select the 3rd dimension as the most contributive attribute, since it achieve the lowest RMS error on the traning set. More detail please also refer to the [report](./report.pdf).
+As the figure shows, we will select the 2nd dimension as the most contributive attribute, since without 2nd dimension, it achieves the highest(worst) RMS error on the traning set. More detail please also refer to the [report](./report.pdf).
 
 
 
