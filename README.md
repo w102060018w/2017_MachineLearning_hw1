@@ -6,9 +6,9 @@ Student ID: A061610
 In this homework, we are going to deal with 3 mathematical problems and 2 programming problems. The former 3 problems is finished in hand-written format, and this repository mainly show the result of the latter 2 programming problems' result. 
 
 ##### Files: </br>
-* [hw1-1.pdf](./hw1_1.pdf): for solving Jensen's Inequality.
-* [hw1-2.pdf](./hw1_2.pdf): for solving Entropy of the Univariate Gaussian.
-* [hw1-3.pdf](./hw1_3.pdf): for solving KL divergence between two Gaussians.
+* [hw1-1.pdf](./hw1-1.pdf): for solving Jensen's Inequality.
+* [hw1-2.pdf](./hw1-2.pdf): for solving Entropy of the Univariate Gaussian.
+* [hw1-3.pdf](./hw1-3.pdf): for solving KL divergence between two Gaussians.
 * [hw1-4-polynomial-curve-fitting.ipynb](./hw1-4_polynomial_curve_fitting.ipynb): for solving Polynomial Curve Fitting problem. </br>
 * [hw1-5-polynomial-regression.ipynb](./hw1-5_polynomial_regression.ipynb): for solving Polynomial Regression problem. </br>
 * [environment.yml](./environment.yml): build conda environment to avoid tedious dependencies problem.
