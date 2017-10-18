@@ -63,52 +63,33 @@ As the figure shows, we will select the 3rd dimension as the most contributive a
 
 ## Implementation
 ### Data 
-please put the data directly as follows:
+The data provided in this assigment are as follows:
 
-```
-resize_data/
-	frames/
-		labels/
-		test/
-			house/
-				4/
-				5/
-				6/
-			lab/
-				5/
-				6/
-				7/
-				8/
-			office/
-				4/
-				5/
-				6/
-		train/
-			house/
-				1/
-				2/
-				3/
-			lab/
-				1/
-				2/
-				3/
-				4/
-			office/
-				1/
-				2/
-				3/
-```
-### Model Structure
-1. **AlexNet**: </br>
-According to the [paper](https://drive.google.com/file/d/0BwCy2boZhfdBM0ZDTV9lZW1rZzg/view) provided in this assignment, the 2-streams structure is as follows:
-<img src='./2-stream.png'>
-Therefore, simply concate the two streams output(hand, head) from fc6 and on top of it add 2 simple fully-connected layers.</br>
-In the Discussion part we will discuss more on the result of 1-stream versus 2-streams.</br>
+* problem-4 : **1-dimension** data
 
-2. **InceptionV3**: </br>
-The InceptionV3 model was proposed in 2015 and achieve 3.5% top-5 error rate ImageNet dataset. It imporves several parts compared with InceptionV2, such as the idea of factorization of convolutions. Compare between Alexnet and Inception model, the Inception model use less number of parameters but improves the efficiency in using parameters. The structure looks as follows: </br>
-<img src='./InceptionV3.png'>
-I didn't do any modification on the InceptionV3 model, but just add 2 fully-connected layers on top of the InceptionV3 model.
+
+|| target(label) | data|
+|-------|----------|-------|
+| training(# 20)| 1.976161</br> -1.016098</br> ...  | 6.283185 </br> 4.983216 </br> ...|
+| testing(# 10)| -4.433719</br> -0.695587</br> ...  | 2.383277 </br> 5.199877 </br> ... |
+
+* problem-5 : **4-dimension** data </br>
+(3-classes, # of 50 data per class)</br>
+(traning: first 80% of data in each class)</br>
+(testing: last 20% of data in each class)
+
+
+|| target(label) | data|
+|-------|----------|-------|
+| training(# 120)|1 </br> 1</br> ...</br>2</br> 2</br> ...</br>3</br> 3</br> ...   | [ 5.1  3.5  1.4  0.2] </br> [ 4.9  3.   1.4  0.2] </br> ...</br>[ 7.   3.2  4.7  1.4]</br>[ 6.4  3.2  4.5  1.5]</br>...</br>[ 6.3  3.3  6.   2.5]</br>[ 5.8  2.7  5.1  1.9]</br> ...|
+| testing(# 30)| 1</br> 1</br> ...</br>2</br> 2</br> ...</br>3</br> 3</br> ...  | [ 5.   3.5  1.3  0.3]</br>[ 4.5  2.3  1.3  0.3] </br> ...</br>[ 5.5  2.6  4.4  1.2]</br>[ 6.1  3.   4.6  1.4]</br>...</br>[ 6.7  3.1  5.6  2.4]</br>[ 6.9  3.1  5.1  2.3]</br> ... |
+
+
+
+### Solving the Weight
+recalll that in this assignment we define the polynomial as :
+
+$ y(x, w) = w_{0} + w_{1}*x + w_{1}*x^{2} + ... + w_{M}*x^{M} = \sum_{j=0}^{M}w_j*x^{j} $
 
 ### Training Detail
 1. **AlexNet**:</br>
